@@ -3,7 +3,7 @@ import axios from 'axios'
 import Noty from 'noty'
 import { initAdmin } from './admin'
 import moment from 'moment'
-console.log('sdqsva')
+// console.log('sdqsva')
 // console.log("asfva")
 
 let addTocart = document.querySelectorAll('.add-to-cart')
