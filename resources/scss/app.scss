@@ -14,9 +14,7 @@ nav li:last-child a {
         background: $primary-hover;
     }
 }
-button{
-    background: $primary;
-}
+
 nav li a {
     transition: $smooth;
     &:hover {
@@ -44,7 +42,7 @@ section.hero {
 }
 
 .btn-primary {
-    background: $primary;
+    background: #FE5F1E;
     transition: $smooth;
     &:hover {
         background: $primary-hover;

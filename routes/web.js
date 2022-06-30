@@ -22,6 +22,8 @@ function initRoutes(app){
     app.get('/register',guest,authController().register)
     app.post('/register',authController().postregister)
 
+    
+
    app.post('/logout',authController().logout)
 
 
@@ -40,6 +42,7 @@ function initRoutes(app){
     app.get('/admin/orders',admin,AdminOrderController().index)
     app.post('/admin/order/status',admin,statusController().update)
 
+   
 }
 
 

@@ -65,10 +65,15 @@ let order = hiddenInput ? hiddenInput : null
 order = JSON.parse(order)
 // console.log(order)
 
-let time = document.creatElement('small')
+let time = document.createElement('small')
 
 
 function updateStatus(order){
+
+    statuses.forEach((status)=>{
+        status.classList.remove('step-completed')
+        status.classList.remove('current')
+    })
 
     let stepCompleted = true;
     statuses.forEach((status)=>{
@@ -91,3 +96,34 @@ function updateStatus(order){
 }
 
 updateStatus(order)
+
+
+//Socket
+
+// let socket = io()
+
+// initAdmin(socket)
+// //join
+// if(order){
+//     socket.emit('join',`order_${order._id}`)
+// }
+
+// let adminAreaPath = window.location.pathname
+// console.log(adminAreaPath)
+
+// if(adminAreaPath.includes('admin')){
+//     socket.emit('join','adminRoom')
+// }
+
+// socket.on('orderUpdated',(data)=>{
+//     const updateOrder = {...order}
+//     updateOrder.updatedAt = moment().format()
+//     updateOrder.status = data.status
+//     // console.log(data)
+//     updateStatus(updateOrder)
+//     new Noty({
+//         type : 'success',
+//         timeout : 'Order updated',
+//         progressBar : false
+//     }).show();
+// })

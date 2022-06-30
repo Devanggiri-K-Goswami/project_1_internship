@@ -288,10 +288,6 @@ nav li:last-child a:hover {
   background: #b23301;
 }
 
-button {
-  background: #FE5F1E;
-}
-
 nav li a {
   transition: all 0.3s ease-in-out;
 }

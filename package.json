@@ -35,6 +35,7 @@
     "noty": "^3.2.0-beta-deprecated",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
+    "socket.io": "^4.5.1",
     "webpack": "^5.73.0",
     "webpack-bundle-analyzer": "^4.5.0"
   },

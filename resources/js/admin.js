@@ -51,8 +51,6 @@ export function initAdmin() {
                                     Placed</option>
                                 <option value="confirmed" ${ order.status === 'confirmed' ? 'selected' : '' }>
                                     Confirmed</option>
-                                <option value="prepared" ${ order.status === 'prepared' ? 'selected' : '' }>
-                                    Prepared</option>
                                 <option value="delivered" ${ order.status === 'delivered' ? 'selected' : '' }>
                                     Delivered
                                 </option>
@@ -81,5 +79,16 @@ export function initAdmin() {
         `
         }).join('')
     }
-    
+    let socket = io()
+    socket.on('orderPlaced',(order)=>{
+        new Noty({
+            type: 'success',
+            timeout : 1000,
+            text : 'new Order',
+            progressBar : false
+        }).show()
+        orders.unshift(order)
+        orderTableBody.innerHTML = ''
+        orderTableBody.innerHTML = generateMarkup(orders)
+    })
 }

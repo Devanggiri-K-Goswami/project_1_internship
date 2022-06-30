@@ -3,7 +3,7 @@
     <% if (session.cart) { %>
      
         
-        <div class="order container mx-auto w-1/2">
+        <div class="order container mx-auto xl:w-1/2">
         <div class="flex items-center border-b border-gray-300 pb-4">
             <img width="80px" height="80px" src="/img/cart-black.jfif" alt="car-black">
             <h1 class="font-bold ml-4 text-2xl">Order Summary</h1>
@@ -19,8 +19,16 @@
                     <h1><%= cloth.item.name %></h1>
                     <span><%= cloth.item.size %></span>
                 </div>
-                <span class="flex-1"><%= cloth.qty %> Pcs</span>
+                <span class="flex-1 justify-between"><%= cloth.qty %> Pcs
+                    <!-- <form action="/cart/add/<%= cloth.item._id %>" method="post">
+                    <a href="/cart"><i class="fa fa-plus mx-4" aria-hidden="true"></i></a></form>
+                    <form action="/cart/delete" method="post">
+                    <a href="/cart"><i class="fa fa-trash" aria-hidden="true"></i></a></form> -->
+                </span>
+                
                 <span class="font-bold text-lg">$<%= cloth.item.price  * cloth.qty  %></span>
+                
+                
             </div>
 
             <% } %>

@@ -21,15 +21,15 @@
 
 <body>
 
-    <nav class="container mx-auto flex items-center justify-between py-4 px-4">
+    <nav class="container mx-auto flex items-center justify-between py-4">
         <div>
             <a href="/">
-                <img src="/img/logo.webp" class="logo" width="60px" height="60px" alt="logo"><i>Shopiie</i></a>
+                <img src="/img/logo.webp" class="logo flex items-center justify-between" width="60px" height="60px" alt="logo"><span>Shoppiee</span>
         </div>
         <div class="hover">
             <ul class="flex items-center mr-6">
                 <li class="ml-6"><a href="/">Menu</a></li>
-                <li class="ml-6"><a href="">Offers</a></li>
+                <!-- <li class="ml-6"><a href="">Offers</a></li> -->
 
                 <% if(user) { %>
 
@@ -59,6 +59,7 @@
 
     <%- body %>
 
+    <script src="/socket.io/socket.io.js"></script>
     <script src="/js/app.js"></script>
 </body>
 
