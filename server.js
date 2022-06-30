@@ -13,7 +13,7 @@ const passport = require('passport')
 const Emmiter = require('events')
 
 // Database connection
-mongoose.connect("mongodb://localhost:27017/shop", { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGO_CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
 .catch(error => console.log(error));
 // const connection = mongoose.connection;
 // connection.once('open', () => {

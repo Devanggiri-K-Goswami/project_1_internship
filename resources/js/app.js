@@ -97,6 +97,12 @@ function updateStatus(order){
 
 updateStatus(order)
 
+const paymentForm = document.querySelector('#payment-form');
+paymentForm.addEventListener('submit',(e)=>{
+    e.preventDefault()
+    console.log(e)
+})
+
 
 //Socket
 

@@ -2626,7 +2626,12 @@ function updateStatus(order) {
   });
 }
 
-updateStatus(order); //Socket
+updateStatus(order);
+var paymentForm = document.querySelector('#payment-form');
+paymentForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  console.log('hello click');
+}); //Socket
 // let socket = io()
 // initAdmin(socket)
 // //join
