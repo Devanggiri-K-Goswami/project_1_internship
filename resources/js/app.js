@@ -100,7 +100,8 @@ updateStatus(order)
 const paymentForm = document.querySelector('#payment-form');
 paymentForm.addEventListener('submit',(e)=>{
     e.preventDefault()
-    console.log(e)
+    let formData = new FormData(paymentForm)
+    console.log(formData)
 })
 
 

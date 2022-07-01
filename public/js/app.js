@@ -2630,7 +2630,8 @@ updateStatus(order);
 var paymentForm = document.querySelector('#payment-form');
 paymentForm.addEventListener('submit', function (e) {
   e.preventDefault();
-  console.log('hello click');
+  var formData = new FormData(paymentForm);
+  console.log(formData);
 }); //Socket
 // let socket = io()
 // initAdmin(socket)
