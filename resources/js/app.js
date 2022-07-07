@@ -101,7 +101,15 @@ const paymentForm = document.querySelector('#payment-form');
 paymentForm.addEventListener('submit',(e)=>{
     e.preventDefault()
     let formData = new FormData(paymentForm)
-    console.log(formData)
+    let formObject = {}
+
+    for(let [key,value] of formData.entries()){
+        formObject[key] = value
+    }
+    axios.post('/orders',formObject.then(()=>{
+        
+    }))
+    // console.log(formData)
 })
 
 
