@@ -7,7 +7,7 @@ const menuSchema = new Schema({
         required : true
     },
     image : {
-        type : String,
+        type : String,  
         required : true
     },
     price : {
